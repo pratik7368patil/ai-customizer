@@ -1,8 +1,11 @@
 <script setup lang="ts">
+// import Editor from './pages/Editor.vue';
+import EditorRaw from './pages/EditorRaw.vue';
 </script>
 
 <template>
   <div>
-    Hello World
+    <!-- <Editor /> -->
+    <EditorRaw />
   </div>
 </template>

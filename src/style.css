@@ -1,10 +1,27 @@
 :root {
+  --gjs-bg: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  --gjs-panel-bg: rgba(255,255,255,0.55);
+  --gjs-block-bg: rgba(255,255,255,0.55);
+  --gjs-canvas-bg: rgba(255,255,255,0.82);
+  --gjs-border-radius: 18px;
+  --gjs-shadow: 0 4px 24px rgba(60, 80, 180, 0.11);
+  --gjs-blur: blur(14px) saturate(170%);
+  --gjs-border: 1.5px solid rgba(120,140,255,0.13);
+  --gjs-accent: #6366f1;
+  --gjs-block-hover-bg: rgba(99,102,241,0.13);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }

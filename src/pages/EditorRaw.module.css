@@ -1,0 +1,247 @@
+/* Editor canvas */
+.gjs {
+  border: none;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Canvas styles */
+.gjs :global(.gjs-cv-canvas) {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #f1f5f9;
+  background-image: linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Panel styles */
+.gjs :global(.gjs-pn-panel) {
+  position: relative;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: white;
+  margin: 4px;
+}
+
+/* Block styles */
+.gjs :global(.gjs-block) {
+  width: auto;
+  height: auto;
+  min-height: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 12px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.gjs :global(.gjs-block:hover) {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Color scheme */
+.gjs :global(.gjs-one-bg) {
+  background-color: #ffffff;
+}
+
+.gjs :global(.gjs-two-color) {
+  color: #3b82f6;
+}
+
+.gjs :global(.gjs-three-bg) {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.gjs :global(.gjs-four-color),
+.gjs :global(.gjs-four-color-h:hover) {
+  color: #3b82f6;
+}
+
+/* Modal styles */
+.gjs :global(.gjs-mdl-dialog) {
+  min-width: 500px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.gjs :global(.gjs-mdl-dialog-sm) {
+  width: 300px;
+}
+
+.gjs :global(.gjs-mdl-header) {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+.gjs :global(.gjs-mdl-content) {
+  padding: 20px;
+}
+
+/* Button styles */
+.gjs :global(.gjs-btn-prim) {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.gjs :global(.gjs-btn-prim:hover) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Layer and style manager */
+.gjs :global(.gjs-layer) {
+  padding: 8px;
+  border-radius: 6px;
+  margin: 4px 0;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.gjs :global(.gjs-layer:hover) {
+  border-color: #3b82f6;
+  background-color: #f0f9ff;
+}
+
+.gjs :global(.gjs-layer-title) {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.gjs :global(.gjs-layer-count) {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+/* Style manager inputs */
+.gjs :global(.gjs-sm-field) {
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  margin: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.gjs :global(.gjs-sm-field:focus-within) {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Commands panel */
+:global(.gjs-pn-panel.gjs-pn-commands) {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Command buttons */
+:global(.gjs-pn-btn) {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+:global(.gjs-pn-btn:hover) {
+  background-color: #f0f9ff;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Layer manager */
+.gjs :global(.gjs-layer-title) {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 2px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.gjs :global(.gjs-layer-title.gjs-selected) {
+  background-color: #f3f0ff;
+  color: #6b46c1;
+  border-color: #805ad5;
+}
+
+/* Style manager */
+.gjs :global(.gjs-sm-sector) {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.gjs :global(.gjs-sm-sector-title) {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Input fields */
+.gjs :global(.gjs-field) {
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+.gjs :global(.gjs-field:focus) {
+  border-color: #805ad5;
+}
+
+/* Selected components */
+.gjs :global(.gjs-selected) {
+  outline: 2px solid #805ad5 !important;
+}
+
+/* Modal styling */
+.gjs :global(.gjs-mdl-dialog) {
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.gjs :global(.gjs-mdl-header) {
+  background-color: #f3f0ff;
+  color: #553c9a;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Icons color */
+.gjs :global(.gjs-pn-btn svg) {
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}
+
+:global(.gjs-pn-panel.gjs-pn-commands) {
+  position: relative;
+  width: 100%;
+}

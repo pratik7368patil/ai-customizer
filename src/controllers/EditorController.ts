@@ -127,30 +127,7 @@ export class EditorController {
       },
     });
 
-    this.addBlocks([
-      {
-        id: "section",
-        label: "Section",
-        content:
-          '<section class="section"><div class="container"></div></section>',
-      },
-      {
-        id: "text",
-        label: "Text",
-        content: '<div class="text">Insert your text here</div>',
-      },
-      {
-        id: "image",
-        label: "Image",
-        content:
-          '<img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Placeholder image"/>',
-      },
-      {
-        id: "button",
-        label: "Button",
-        content: '<button class="button">Click me</button>',
-      },
-    ]);
+    this.addBlocks(blocks);
     this.initAICommands();
   }
 

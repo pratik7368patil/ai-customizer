@@ -164,12 +164,15 @@
 
 /* Command buttons */
 :global(.gjs-pn-btn) {
-  padding: 8px 12px;
+  padding: 8px;
   border-radius: 6px;
   background-color: #f8fafc;
   color: #1e293b;
   border: 1px solid #e2e8f0;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 :global(.gjs-pn-btn:hover) {
@@ -244,4 +247,43 @@
 :global(.gjs-pn-panel.gjs-pn-commands) {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --gjs-main-color: #ffffff;
+  --gjs-primary-color: #ffffff;
+  --gjs-secondary-color: #553c9a;
+  --gjs-tertiary-color: #6366f1;
+  --gjs-quaternary-color: #818cf8;
+  --gjs-font-color: #374151;
+  --gjs-font-color-active: #111827;
+  --gjs-main-dark-color: rgba(17, 24, 39, 0.2);
+  --gjs-secondary-dark-color: rgba(17, 24, 39, 0.1);
+  --gjs-main-light-color: rgba(255, 255, 255, 0.1);
+  --gjs-secondary-light-color: rgba(255, 255, 255, 0.8);
+  --gjs-soft-light-color: rgba(255, 255, 255, 0.02);
+  --gjs-color-blue: #3b82f6;
+  --gjs-color-red: #ef4444;
+  --gjs-color-yellow: #f59e0b;
+  --gjs-color-green: #10b981;
+  --gjs-left-width: 15%;
+  --gjs-color-highlight: #60a5fa;
+  --gjs-color-warn: #fbbf24;
+  --gjs-handle-margin: -5px;
+  --gjs-light-border: rgba(255, 255, 255, 0.08);
+  --gjs-arrow-color: rgba(255, 255, 255, 0.8);
+  --gjs-dark-text-shadow: rgba(17, 24, 39, 0.2);
+  --gjs-color-input-padding: 22px;
+  --gjs-input-padding: 5px;
+  --gjs-padding-elem-classmanager: 5px 6px;
+  --gjs-upload-padding: 150px 10px;
+  --gjs-animation-duration: .2s;
+  --gjs-main-font: Inter, system-ui, -apple-system, sans-serif;
+  --gjs-font-size: .75rem;
+  --gjs-placeholder-background-color: var(--gjs-color-green);
+  --gjs-canvas-top: 40px;
+  --gjs-flex-item-gap: 5px;
 }

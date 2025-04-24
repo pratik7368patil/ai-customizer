@@ -9,6 +9,7 @@ import {
   blockManagerConfig,
   canvasConfig,
 } from "../config";
+import axios from "axios";
 
 interface BlockModel {
   id: string;
@@ -160,9 +161,32 @@ export class EditorController {
         generateBtn.style.borderRadius = "4px";
         generateBtn.style.cursor = "pointer";
 
-        generateBtn.addEventListener("click", () => {
-          // TODO: Implement AI generation logic here
-          console.log("Generating with prompt:", textarea.value);
+        generateBtn.addEventListener("click", async () => {
+          const response = await axios.post("http://localhost:8000/generate", {
+            prompt: textarea.value,
+          });
+
+          // add response to gjs editor
+          if (response.data && response.data.html) {
+            editor.addComponents(response.data.html);
+            editor.addStyle(
+              `.cell { 
+                width: -webkit-fill-available; 
+                padding: 5px; 
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }`
+            );
+            
+            // Make all cells droppable
+            const wrapper = editor.DomComponents.getWrapper();
+            const cells = wrapper?.find('.cell');
+            cells?.forEach(cell => {
+              cell.set({ droppable: true, hoverable: true, selectable: true });
+            });
+          }
           modal.close();
         });
 

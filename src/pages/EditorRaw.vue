@@ -4,22 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { onMounted } from "vue";
 import styles from "./EditorRaw.module.css";
 import { EditorController } from "../controllers/EditorController";
-import type { BlockModel } from "../models/BlockModel";
-
-// Define sample blocks
-const sampleBlocks: BlockModel[] = [
-  {
-    id: "sample-text",
-    label: "Sample Text",
-    content: '<div class="sample-block">Sample Text Block</div>',
-  },
-  {
-    id: "sample-image",
-    label: "Sample Image",
-    content:
-      '<div class="sample-block"><img src="https://picsum.photos/200" alt="Sample" /></div>',
-  },
-];
+import { sampleBlocks } from "../config";
 
 const controller = new EditorController("#gjs", sampleBlocks);
 

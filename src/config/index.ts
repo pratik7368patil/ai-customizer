@@ -3,4 +3,5 @@ export * from './canvasConfig';
 export * from './deviceManagerConfig';
 export * from './layerManagerConfig';
 export * from './panelsConfig';
+export * from './blocksConfig';
 export * from './styleManagerConfig';
